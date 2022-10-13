@@ -326,11 +326,21 @@ main {
   border-radius: 50%;
 
   cursor: pointer;
+  color: var(--accent-blue-color);
+}
+
+.cross-svg {
+  transition: fill var(--transition-standart);
+}
+
+.elips-svg:hover .cross-svg,
+.elips-svg:focus .cross-svg {
+  fill: currentColor;
 }
 
 /* -----MODAL-FILL----- */
 
-.modal-container {
+.modal-form {
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -373,14 +383,31 @@ main {
 
   border: 1px solid var(--input-border-color);
   border-radius: 4px;
+
+  transition: border-color var(--transition-standart);
 }
 
-.icon-person-name {
+.modal-input:focus-visible,
+.modal-textarea:focus-visible {
+  outline: none;
+}
+
+.modal-input:focus,
+.modal-textarea:focus {
+  border-color: var(--accent-blue-color);
+}
+
+.modal-input-icon {
   position: absolute;
   top: 50%;
   left: 12px;
 
   transform: translateY(-50%);
+  transition: fill var(--transition-standart);
+}
+
+.modal-input:focus ~ .modal-input-icon {
+  fill: var(--accent-blue-color);
 }
 
 .modal-textarea {
@@ -395,6 +422,8 @@ main {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
+
+  transition: border-color var(--transition-standart);
 }
 
 .modal-textarea::placeholder {
@@ -403,7 +432,7 @@ main {
 
 /* -----CHECKBOX----- */
 
-.modal-checkbox {
+.modal-checkbox-form {
   display: flex;
   align-items: center;
   margin-top: 20px;
@@ -417,7 +446,7 @@ main {
   cursor: pointer;
 }
 
-.modal-checkbox .checkbox {
+.modal-checkbox {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -430,6 +459,11 @@ main {
   margin: -1px;
 }
 
+.modal-checkbox:checked ~ .icon-check {
+  background-color: var(--accent-blue-color);
+  border-color: transparent;
+}
+
 .icon-check {
   display: flex;
   align-self: center;
@@ -438,16 +472,19 @@ main {
   margin-right: 8.38px;
 }
 
-.modal-checkbox .link-terms {
+.modal-checkbox-form .link-terms {
   display: inline-block;
   margin-left: 5px;
   color: var(--accent-blue-color);
   cursor: pointer;
+
+  text-decoration: none;
+  transition: transform var(--transition-standart);
 }
 
-.modal-checkbox .link-terms:hover,
-.modal-checkbox .link-terms:focus {
-  font-size: 15px;
+.modal-checkbox-form .link-terms:hover,
+.modal-checkbox-form .link-terms:focus {
+  transform: scale(1.05);
   text-decoration: underline;
 }
 
@@ -528,6 +565,7 @@ main {
   color: var(--primary-white-color);
 
   background-color: var(--accent-blue-color);
+  box-shadow: 0px 4px 4px 0px #00000026;
 
   transition: background-color var(--transition-standart);
 }

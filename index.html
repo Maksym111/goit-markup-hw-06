@@ -63,20 +63,20 @@
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
             <div class="elips-svg" data-modal-close>
-              <svg width="11px" height="11px">
+              <svg class="cross-svg" width="11px" height="11px">
                 <use href="./images/icons.svg#icon-cross"></use>
               </svg>
             </div>
 
-            <div class="modal-container">
+            <form action="" class="modal-form">
               <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
 
               <label class="modal-label" name="name">
                 <div class="label">Ім'я</div>
 
                 <div class="wrapper-label">
-                  <input type="text" class="modal-input" />
-                  <svg class="icon-person-name" width="18px" height="18px">
+                  <input type="text" class="modal-input" name="name" />
+                  <svg class="modal-input-icon" width="18px" height="18px">
                     <use href="./images/icons.svg#icon-person"></use>
                   </svg>
                 </div>
@@ -86,8 +86,8 @@
                 <div class="label">Телефон</div>
 
                 <div class="wrapper-label">
-                  <input type="tel" class="modal-input" />
-                  <svg class="icon-person-name" width="18px" height="18px">
+                  <input type="tel" class="modal-input" name="telephone number" />
+                  <svg class="modal-input-icon" width="18px" height="18px">
                     <use href="./images/icons.svg#icon-phone"></use>
                   </svg>
                 </div>
@@ -97,8 +97,8 @@
                 <div class="label">Пошта</div>
 
                 <div class="wrapper-label">
-                  <input type="email" class="modal-input" />
-                  <svg class="icon-person-name" width="18px" height="18px">
+                  <input type="email" class="modal-input" name="email" />
+                  <svg class="modal-input-icon" width="18px" height="18px">
                     <use href="./images/icons.svg#icon-email-envelope"></use>
                   </svg>
                 </div>
@@ -108,13 +108,17 @@
                 <div class="label">Коментар</div>
 
                 <div class="wrapper-label">
-                  <textarea class="modal-textarea" placeholder="Введіть текст"></textarea>
+                  <textarea
+                    class="modal-textarea"
+                    placeholder="Введіть текст"
+                    name="comment"
+                  ></textarea>
                 </div>
               </label>
 
-              <div class="modal-checkbox">
+              <div class="modal-checkbox-form">
                 <label class="label-checkbox" name="check-agree">
-                  <input type="checkbox" class="checkbox" />
+                  <input type="checkbox" class="modal-checkbox" name="agree link terms" />
                   <span class="icon-check">
                     <svg class="icon" width="16px" height="15px">
                       <use href="./images/icons.svg#icon-check"></use>
@@ -125,8 +129,8 @@
                 <a href="" class="link-terms">Умови договору</a>
               </div>
 
-              <button class="modal-button button" type="button">Відправити</button>
-            </div>
+              <button class="modal-button button" type="submit">Відправити</button>
+            </form>
           </div>
         </div>
       </section>
@@ -525,7 +529,7 @@
         </div>
         <div class="column footer-third-column">
           <p class="title">Підпишіться на розсилку</p>
-          <div class="footer-subscribe">
+          <form class="footer-subscribe">
             <input class="footer-input" type="email" name="subscribe-email" placeholder="E-mail" />
 
             <button class="button footer-subscribe-button" type="submit">
@@ -536,7 +540,7 @@
                 </svg>
               </span>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </footer>
