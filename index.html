@@ -62,20 +62,20 @@
 
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
-            <div class="elips-svg" data-modal-close>
+            <button class="elips-svg" data-modal-close>
               <svg class="cross-svg" width="11px" height="11px">
                 <use href="./images/icons.svg#icon-cross"></use>
               </svg>
-            </div>
+            </button>
 
-            <form action="" class="modal-form">
+            <form action="" class="modal-form" autocomplete="off">
               <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
 
               <label class="modal-label" name="name">
                 <div class="label">Ім'я</div>
 
                 <div class="wrapper-label">
-                  <input type="text" class="modal-input" name="name" />
+                  <input type="text" class="modal-input" name="name" required />
                   <svg class="modal-input-icon" width="18px" height="18px">
                     <use href="./images/icons.svg#icon-person"></use>
                   </svg>
@@ -86,7 +86,7 @@
                 <div class="label">Телефон</div>
 
                 <div class="wrapper-label">
-                  <input type="tel" class="modal-input" name="telephone number" />
+                  <input type="tel" class="modal-input" name="telephone number" required />
                   <svg class="modal-input-icon" width="18px" height="18px">
                     <use href="./images/icons.svg#icon-phone"></use>
                   </svg>
@@ -97,7 +97,7 @@
                 <div class="label">Пошта</div>
 
                 <div class="wrapper-label">
-                  <input type="email" class="modal-input" name="email" />
+                  <input type="email" class="modal-input" name="email" required />
                   <svg class="modal-input-icon" width="18px" height="18px">
                     <use href="./images/icons.svg#icon-email-envelope"></use>
                   </svg>
@@ -118,7 +118,7 @@
 
               <div class="modal-checkbox-form">
                 <label class="label-checkbox" name="check-agree">
-                  <input type="checkbox" class="modal-checkbox" name="agree link terms" />
+                  <input type="checkbox" class="modal-checkbox" name="agree link terms" required />
                   <span class="icon-check">
                     <svg class="icon" width="16px" height="15px">
                       <use href="./images/icons.svg#icon-check"></use>
@@ -474,7 +474,7 @@
 
     <footer class="footer">
       <div class="container column-list">
-        <div class="column footer-first-colomn">
+        <div class="footer-first-colomn column">
           <a href="./index.html" class="logo-footer link">Web<span class="footer">Studio</span></a>
           <address class="contact-address">
             <ul class="address-list list">
@@ -494,7 +494,7 @@
             </ul>
           </address>
         </div>
-        <div class="column footer-second-column">
+        <div class="footer-second-column column">
           <p class="title">приєднуйтесь</p>
           <ul class="list-item list">
             <li class="item">
@@ -527,7 +527,7 @@
             </li>
           </ul>
         </div>
-        <div class="column footer-third-column">
+        <div class="footer-third-column column">
           <p class="title">Підпишіться на розсилку</p>
           <form class="footer-subscribe">
             <input class="footer-input" type="email" name="subscribe-email" placeholder="E-mail" />
